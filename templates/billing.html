@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Hospital Billing</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Hospital Management System</h1>
+
+    <div class="nav">
+
+        <a href="/">Home</a>
+
+        <a href="/appointments">Appointments</a>
+
+        <a href="/patients">Patients</a>
+
+        <a href="/doctors">Doctors</a>
+
+        <a href="/billing">Billing</a>
+
+    </div>
+
+    <div class="bill-box">
+
+        <h2 class="bill-title">
+            Generate Patient Bill
+        </h2>
+
+        <form method="POST">
+
+            <label>Patient Name</label>
+
+            <input type="text"
+                   name="patient_name"
+                   placeholder="Enter Patient Name"
+                   required>
+
+            <label>Doctor Fee</label>
+
+            <input type="number"
+                   name="doctor_fee"
+                   placeholder="Enter Doctor Fee"
+                   required>
+
+            <label>Medicine Fee</label>
+
+            <input type="number"
+                   name="medicine_fee"
+                   placeholder="Enter Medicine Fee"
+                   required>
+
+            <label>Room Fee</label>
+
+            <input type="number"
+                   name="room_fee"
+                   placeholder="Enter Room Fee"
+                   required>
+
+            <label>Payment Status</label>
+
+            <select name="payment_status">
+
+                <option value="Paid">
+                    Paid
+                </option>
+
+                <option value="Unpaid">
+                    Unpaid
+                </option>
+
+            </select>
+
+            <button type="submit">
+                Generate Bill
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>

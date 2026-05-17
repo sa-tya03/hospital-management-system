@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Book Appointment</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Book an Appointment</h2>
+        <form method="POST">
+            <label>Select Doctor:</label>
+            <select name="doctor_id" required>
+                {% for doctor in doctors %}
+                <option value="{{ doctor.id }}">
+                    {{ doctor.name }} - {{ doctor.specialization }}
+                </option>
+                {% endfor %}
+            </select>
+            <label>Select Date:</label>
+            <input type="date" name="date" required>
+            <label>Select Time:</label>
+            <input type="time" name="time" required>
+            <button type="submit">Book Appointment</button>
+        </form>
+        <br>
+        <a href="/dashboard">Back to Dashboard</a>
+    </div>
+</body>
+</html>

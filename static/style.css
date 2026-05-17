@@ -1,0 +1,211 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+    width: 100%;
+    max-width: 850px;
+    margin: 30px auto;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #00f5ff;
+    font-size: 30px;
+    margin-bottom: 10px;
+    text-shadow: 0 0 20px #00f5ff;
+}
+
+h2 {
+    text-align: center;
+    color: #a78bfa;
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px #a78bfa;
+}
+
+h3 {
+    color: #e2e8f0;
+    margin: 20px 0 10px 0;
+    font-size: 18px;
+}
+
+input, select {
+    width: 100%;
+    padding: 12px 15px;
+    margin: 8px 0;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 8px;
+    font-size: 14px;
+    color: white;
+    outline: none;
+    transition: border 0.3s;
+}
+
+input:focus, select:focus {
+    border-color: #00f5ff;
+    box-shadow: 0 0 10px rgba(0,245,255,0.3);
+}
+
+input::placeholder {
+    color: rgba(255,255,255,0.4);
+}
+
+select option {
+    background: #302b63;
+    color: white;
+}
+
+button {
+    width: 100%;
+    padding: 13px;
+    background: linear-gradient(135deg, #00f5ff, #a78bfa);
+    color: #0f0c29;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: opacity 0.3s, transform 0.2s;
+}
+
+button:hover {
+    opacity: 0.9;
+    transform: scale(1.02);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+th {
+    background: linear-gradient(135deg, #00f5ff, #a78bfa);
+    color: #0f0c29;
+    padding: 14px;
+    text-align: left;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+td {
+    padding: 12px 14px;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    font-size: 14px;
+    color: #e2e8f0;
+}
+
+tr:hover td {
+    background-color: rgba(255,255,255,0.05);
+}
+
+.nav {
+    text-align: center;
+    margin: 15px 0 25px 0;
+    padding: 10px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 8px;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+a {
+    color: #00f5ff;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #a78bfa;
+}
+
+label {
+    font-size: 14px;
+    color: #a78bfa;
+    font-weight: bold;
+    margin-top: 10px;
+    display: block;
+}
+
+p {
+    text-align: center;
+    margin-top: 15px;
+    color: rgba(255,255,255,0.5);
+    font-size: 14px;
+}    
+/* BILLING SECTION */
+
+.bill-box{
+    background: rgba(255,255,255,0.04);
+    padding: 25px;
+    border-radius: 15px;
+    margin-top: 25px;
+    border: 1px solid rgba(255,255,255,0.08);
+}
+
+.bill-title{
+    text-align: center;
+    color: #00f5ff;
+    margin-bottom: 20px;
+    font-size: 22px;
+    text-shadow: 0 0 10px #00f5ff;
+}
+
+.total-box{
+    margin-top: 15px;
+    padding: 15px;
+    background: rgba(0,245,255,0.08);
+    border: 1px solid rgba(0,245,255,0.2);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.total-box h3{
+    color: #00f5ff;
+    font-size: 22px;
+}
+
+.paid{
+    color: #22c55e;
+    font-weight: bold;
+}
+
+.unpaid{
+    color: #ef4444;
+    font-weight: bold;
+}
+
+.bill-table{
+    margin-top: 25px;
+}
+
+.bill-table th{
+    text-align: center;
+}
+
+.bill-table td{
+    text-align: center;
+}
