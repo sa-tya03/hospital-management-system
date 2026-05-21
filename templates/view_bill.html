@@ -21,7 +21,10 @@
 
     <div class="bill-box">
 
+        {% if bills %}
+
         <table class="bill-table">
+
             <tr>
                 <th>Appointment ID</th>
                 <th>Doctor Fee</th>
@@ -48,25 +51,26 @@
                         <span class="unpaid">Unpaid</span>
                     {% endif %}
                 </td>
-
                 <td>
                     {% if bill.payment_status != "Paid" %}
-                        <a href="/pay_bill/{{ bill.id }}">
-                            <button>Pay Now</button>
-                        </a>
+                    <form method="POST" action="/pay_bill/{{ bill.id }}" 
+                    onsubmit="return confirm('Are you sure you want to pay this bill?\n\nTotal Amount: ₹{{ bill.total_amount }}')">
+                    <button type="submit">Pay Now</button>
+                    </form>
                     {% else %}
-                        ✔ Completed
+                    ✔ Completed
                     {% endif %}
-                </td>
+                    </td>
             </tr>
-
             {% endfor %}
-
         </table>
-
+        {% else %}
+        <!-- EMPTY STATE -->
+        <p style="text-align:center; color:#a78bfa; margin-top:20px;">
+            No bills found yet. Please book an appointment.
+        </p>
+        {% endif %}
     </div>
-
 </div>
-
 </body>
 </html>

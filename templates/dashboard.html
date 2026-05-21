@@ -4,29 +4,46 @@
     <title>Dashboard</title>
     <link rel="stylesheet" href="/static/style.css">
 </head>
+
 <body>
+
     <div class="container">
-        <h2>Welcome, {{ name }}! 👋</h2>
+
+        <h2 style="color:#00f5ff; text-shadow:0 0 10px #00f5ff;">
+            Welcome, {{ name }}! 👋
+        </h2>
+
+        <!-- NAVIGATION -->
         <div class="nav">
             <a href="/book_appointment">Book Appointment</a> |
             <a href="/my_appointments">My Appointments</a> |
+            <a href="/view_bill">View My Bill</a> |
             <a href="/logout">Logout</a>
         </div>
-        <h3>Available Doctors</h3>
+
+        <!-- DOCTOR LIST -->
+        <h3 style="color:#a78bfa;">
+            Available Doctors
+        </h3>
+
         <table>
             <tr>
                 <th>Name</th>
                 <th>Specialization</th>
                 <th>Phone</th>
             </tr>
+
             {% for doctor in doctors %}
             <tr>
-                <td>{{ doctor.name }}</td>
-                <td>{{ doctor.specialization }}</td>
-                <td>{{ doctor.phone }}</td>
+                <td style="color:#e2e8f0;">{{ doctor.name }}</td>
+                <td style="color:#e2e8f0;">{{ doctor.specialization }}</td>
+                <td style="color:#e2e8f0;">{{ doctor.phone }}</td>
             </tr>
             {% endfor %}
+
         </table>
+
     </div>
+
 </body>
 </html>
