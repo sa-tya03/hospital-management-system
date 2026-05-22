@@ -1,22 +1,27 @@
-# Hospital Management System
+# 🏥 Hospital Management System
 
-A Flask-based web application for managing hospital appointments.
+A web-based Hospital Management System built with **Python Flask** and **MySQL** that allows patients to register, book appointments, and manage their billing online.
 
-## Features
-- User Registration
-- Login System
-- Appointment Booking
-- Dashboard
-- Appointment Tracking
+## ✨ Features
 
-## Technologies Used
-- Python
-- Flask
-- HTML
-- CSS
+- 👤 Patient Registration & Login
+- 📅 Book Appointments with Doctors
+- 💊 View Assigned Doctors & Specializations
+- 🧾 Automatic Bill Generation after Appointment
+- 💳 Online Bill Payment with Confirmation
+- 🔒 Session-based Authentication
 
-## Run Project
+## 🛠️ Tech Stack
 
-pip install flask
+| Layer | Technology |
+|---|---|
+| Backend | Python, Flask |
+| Database | MySQL |
+| Frontend | HTML, CSS, Jinja2 |
+| ORM | Flask-SQLAlchemy |
+| Auth | Werkzeug Password Hashing |
 
-python app.py
+## ⚙️ Installation & Setup
+
+1. **Clone the repository**
+```bash
