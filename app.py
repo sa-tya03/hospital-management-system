@@ -1,7 +1,8 @@
 from flask import Flask, render_template, request, redirect, session
 from flask_sqlalchemy import SQLAlchemy
 from werkzeug.security import generate_password_hash, check_password_hash
-
+import webbrowser
+from threading import Timer
 app = Flask(__name__)
 app.secret_key = "hospital123"
 app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:Satya%402006@localhost/hospital_db'
@@ -139,12 +140,14 @@ def view_bill():
         Appointment, Billing.appointment_id == Appointment.id
     ).filter(Billing.patient_id == session['patient_id']).all()
     return render_template('view_bill.html', bills=bills)
-
 @app.route('/pay_bill/<int:bill_id>', methods=['POST'])
 def pay_bill(bill_id):
     bill = Billing.query.get(bill_id)
     bill.payment_status = "Paid"
     db.session.commit()
     return redirect('/view_bill')
+def open_browser():
+    webbrowser.open('http://127.0.0.1:5000')
 if __name__ == '__main__':
-    app.run(debug=True)
+    Timer(1, open_browser).start()
+    app.run(debug=True, use_reloader=False)
